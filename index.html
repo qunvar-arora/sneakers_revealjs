@@ -7,10 +7,13 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="css/animate/animate.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -20,12 +23,97 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style>
+			.box {
+			    
+			    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+			    transition: width 2s, height 2s, background-color 2s, transform 2s;
+			}
+
+			.box:hover {
+			    
+			    width: 300px;
+			    height: 300px;
+			    -webkit-transform: rotate(360deg);
+			    transform: rotate(360deg);
+			}
+
+			/*$offset : -90px;
+			$count : 40;
+			$duration : 0.3;
+
+			@keyframes wave {
+			  from { transform : translateY(0); color: white; }
+			  to   { transform : translateY( $offset ); }
+			}
+
+			.wavetext {
+			  margin-top : 10em;
+			  text-align : center;
+			}
+
+
+			.wavetext span {
+			  display: inline-block;
+			  font-family : "Fredoka One", sans-serif;
+			  font-size : 70px;
+			 
+			  animation-duration: #{$duration}s;
+			  animation-name: wave;
+			  animation-iteration-count: infinite;
+			  animation-direction: alternate;
+			}
+
+
+			@for $i from 0 to $count {
+			  .wavetext :nth-child( #{$count}n + #{$i} ) {
+			      animation-delay : 
+			        -#{($count - $i) * 2 * $duration / $count }s;
+
+
+			      color: rgba(100+$i * 20 % 155, 10, 100+ $i * 40 % 55, 1);
+			  }
+			}*/
+
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Sneaker Showcase</h2>
+					<h4 class="animated jello" style="animation-iteration-count: infinite;">The Wave Curated Collection of Q Arora</h4>
+					<!--<div class="wavetext"></div>-->
+					<p class="animated slideInRight" style="animation-duration: 2s;">
+						<small>Inspired by the 90's, 2000's, <i>NIKE<span style="color: #ff0000;">TALK</span></i>, and Gaithersburg Maryland</small>
+					</p>
+				</section>
+				<section data-autoslide="500" data-background="https://media3.giphy.com/media/JwVAtC5kKjWRW/giphy.gif" id="testington">
+					<p><span class="fragment">It's Mine</span> <span class="fragment">It's Mine</span> <span data-autoslide="0" class="fragment">It's Mine</span></p>
+					<h2>Who's World Is This? The World Is Yours</h2> 
+				</section>
+				<section>
+					<img class="box" width="200" height="200" src="http://www.sneakerfiles.com/wp-content/uploads/2015/12/nike-air-penny-2-atlantic-2016-4.jpg">
+    				<img class="box" width="200" height="200" src="https://s-media-cache-ak0.pinimg.com/originals/bb/18/f3/bb18f3edb484dc91a89f9a0991bfbc68.jpg">
+    				<img class="box" width="200" height="200" src="https://i.ytimg.com/vi/z-Qyqbu3Rr8/maxresdefault.jpg"><br>
+    				<img class="box" width="200" height="200" src="http://www.lebronjamesshoes.us.com/images/lebronjames/624015-005%20nike%20air%20flightposite%20black%20metallic%20silver%20black%20b01005_b-500x500.jpg">
+    				<img class="box" width="200" height="200" src="http://images.complex.com/complex/image/upload/c_limit,w_680/fl_lossy,pg_1,q_auto/bwomclce9p4xzjjr9ox8.jpg">
+    				<img class="box" width="200" height="200" src="http://cdn.shopify.com/s/files/1/0285/5082/files/nike-air-foamposite-pro-pearl-returning-2015-1_large.jpg"><br>
+    				<!--<img width="300" src="http://static.slid.es.s3.amazonaws.com/support/insert-video.png">
+    				<img width="300" src="http://static.slid.es.s3.amazonaws.com/support/insert-video.png">
+    				<img width="300" src="http://static.slid.es.s3.amazonaws.com/support/insert-video.png">-->
+				</section>
+				<section>
+					<p id="movingtons" data-animate="rubberBand">lets make this animate on reveal</p>
+				</section>
+				<section>
+					<img class="box" width="200" height="200" src="http://www.sneakers-actus.fr/wp-content/uploads/2015/07/Nike-Air-Max-95-Olympic-Roy-Sands-600x447.jpg">
+    				<img class="box" width="200" height="200" src="https://s-media-cache-ak0.pinimg.com/originals/bb/18/f3/bb18f3edb484dc91a89f9a0991bfbc68.jpg">
+    				<img class="box" width="200" height="200" src="https://i.ytimg.com/vi/z-Qyqbu3Rr8/maxresdefault.jpg"><br>
+    				<img class="box" width="200" height="200" src="http://www.lebronjamesshoes.us.com/images/lebronjames/624015-005%20nike%20air%20flightposite%20black%20metallic%20silver%20black%20b01005_b-500x500.jpg">
+    				<img class="box" width="200" height="200" src="http://images.complex.com/complex/image/upload/c_limit,w_680/fl_lossy,pg_1,q_auto/bwomclce9p4xzjjr9ox8.jpg">
+    				<img class="box" width="200" height="200" src="http://cdn.shopify.com/s/files/1/0285/5082/files/nike-air-foamposite-pro-pearl-returning-2015-1_large.jpg"><br>
+    			</section>
 			</div>
 		</div>
 
@@ -37,6 +125,8 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+
+				transition: 'convex',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -44,6 +134,40 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+		</script>
+
+		<script>
+
+		Reveal.addEventListener('slidechanged', function( event ) {
+			console.log(event);
+			// Animate elements that are not a fragment (or in a fragment)
+			var filter = '*[data-animate]';
+
+			$(event.currentSlide).find(filter).each( function () {
+				$(this).addClass('animated');
+				$(this).addClass($(this).attr('data-animate'));
+			});		
+			$(event.previousSlide).find(filter).each( function () {
+				$(this).removeClass('animated');
+				$(this).removeClass($(this).attr('data-animate'));
+			});
+
+			if(event.previousSlide.id === 'testington')
+			{
+				$('#testington').find('.fragment').removeClass('visible');
+			}		
+		});
+
+		var text = "I wanna Wowow!";
+
+		for(var i in text) { 
+		  if(text[i] === " ") {
+		    $(".wavetext").append( $("<span>").html("&nbsp;") ); 
+		  } else {  
+		    $(".wavetext").append( $("<span>").text(text[i]) ); 
+		  }
+		}
+
 		</script>
 	</body>
 </html>
